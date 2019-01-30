@@ -1,4 +1,4 @@
-﻿Public Class Snake
+﻿Public Class Maze
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Hide()
         Mainmenu.Show()
@@ -8,7 +8,7 @@
         Me.Hide()
         LeaderBoard.Show()
         LeaderBoard.GroupBoxAntHit.Hide()
-        LeaderBoard.GroupBoxMaze.Hide()
-        LeaderBoard.GroupBoxSnake.Show()
+        LeaderBoard.GroupBoxMaze.Show()
+        LeaderBoard.GroupBoxSnake.Hide()
     End Sub
 End Class

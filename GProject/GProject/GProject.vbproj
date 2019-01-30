@@ -73,11 +73,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AntHit.Designer.vb">
+      <DependentUpon>AntHit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AntHit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaderBoard.Designer.vb">
+      <DependentUpon>LeaderBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LeaderBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maze.Designer.vb">
+      <DependentUpon>Maze.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maze.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -103,8 +121,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AntHit.resx">
+      <DependentUpon>AntHit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaderBoard.resx">
+      <DependentUpon>LeaderBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maze.resx">
+      <DependentUpon>Maze.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

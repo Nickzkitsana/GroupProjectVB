@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Mainmenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Mainmenu))
         Me.btnSnake = New System.Windows.Forms.Button()
         Me.btnAntHit = New System.Windows.Forms.Button()
         Me.btnMaze = New System.Windows.Forms.Button()
@@ -57,7 +58,7 @@ Partial Class Form1
         Me.btnMaze.Text = "Maze"
         Me.btnMaze.UseVisualStyleBackColor = True
         '
-        'Form1
+        'Mainmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -66,8 +67,10 @@ Partial Class Form1
         Me.Controls.Add(Me.btnAntHit)
         Me.Controls.Add(Me.btnSnake)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "Form1"
+        Me.Name = "Mainmenu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Mini Game"
         Me.ResumeLayout(False)
 
