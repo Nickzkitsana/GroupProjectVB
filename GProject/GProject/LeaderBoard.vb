@@ -1,14 +1,19 @@
 ﻿Public Class LeaderBoard
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Me.Hide()
-        If GroupBoxSnake.TabIndex = 0 Then
+        If GroupBoxSnake.Enabled = True Then
             Snake.Show()
+            GroupBoxSnake.Enabled = False
+            Me.Hide()
         End If
-        If GroupBoxAntHit.TabIndex = 1 Then
+        If GroupBoxAntHit.Enabled = True Then
             AntHit.Show()
+            GroupBoxAntHit.Enabled = False
+            Me.Hide()
         End If
-        If GroupBoxMaze.TabIndex = 2 Then
+        If GroupBoxMaze.Enabled = True Then
             Maze.Show()
+            GroupBoxMaze.Enabled = False
+            Me.Hide()
         End If
 
     End Sub

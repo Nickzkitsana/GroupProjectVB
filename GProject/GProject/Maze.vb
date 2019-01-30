@@ -7,8 +7,9 @@
     Private Sub btnRecord_Click(sender As Object, e As EventArgs) Handles btnRecord.Click
         Me.Hide()
         LeaderBoard.Show()
-        LeaderBoard.GroupBoxAntHit.Hide()
         LeaderBoard.GroupBoxMaze.Show()
+        LeaderBoard.GroupBoxMaze.Enabled = True
+        LeaderBoard.GroupBoxAntHit.Hide()
         LeaderBoard.GroupBoxSnake.Hide()
     End Sub
 End Class

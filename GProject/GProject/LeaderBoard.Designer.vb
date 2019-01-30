@@ -31,6 +31,7 @@ Partial Class LeaderBoard
         '
         'GroupBoxSnake
         '
+        Me.GroupBoxSnake.Enabled = False
         Me.GroupBoxSnake.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
         Me.GroupBoxSnake.Location = New System.Drawing.Point(31, 13)
         Me.GroupBoxSnake.Name = "GroupBoxSnake"
@@ -41,6 +42,7 @@ Partial Class LeaderBoard
         '
         'GroupBoxAntHit
         '
+        Me.GroupBoxAntHit.Enabled = False
         Me.GroupBoxAntHit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
         Me.GroupBoxAntHit.Location = New System.Drawing.Point(25, 13)
         Me.GroupBoxAntHit.Name = "GroupBoxAntHit"
@@ -51,6 +53,7 @@ Partial Class LeaderBoard
         '
         'GroupBoxMaze
         '
+        Me.GroupBoxMaze.Enabled = False
         Me.GroupBoxMaze.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
         Me.GroupBoxMaze.Location = New System.Drawing.Point(19, 13)
         Me.GroupBoxMaze.Name = "GroupBoxMaze"

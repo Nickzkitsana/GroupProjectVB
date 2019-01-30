@@ -3,6 +3,7 @@
         Me.Hide()
         LeaderBoard.Show()
         LeaderBoard.GroupBoxAntHit.Show()
+        LeaderBoard.GroupBoxAntHit.Enabled = True
         LeaderBoard.GroupBoxMaze.Hide()
         LeaderBoard.GroupBoxSnake.Hide()
     End Sub
