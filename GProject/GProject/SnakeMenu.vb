@@ -1,4 +1,4 @@
-﻿Public Class Snake
+﻿Public Class SnakeMenu
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Hide()
         Mainmenu.Show()
@@ -6,10 +6,10 @@
 
     Private Sub btnRecord_Click(sender As Object, e As EventArgs) Handles btnRecord.Click
         Me.Hide()
-        LeaderBoard.Show()
-        LeaderBoard.GroupBoxSnake.Show()
-        LeaderBoard.GroupBoxSnake.Enabled = True
-        LeaderBoard.GroupBoxAntHit.Hide()
-        LeaderBoard.GroupBoxMaze.Hide()
+        Leaderboards.Show()
+        Leaderboards.GroupBoxSnake.Show()
+        Leaderboards.GroupBoxSnake.Enabled = True
+        Leaderboards.GroupBoxAntHit.Hide()
+        Leaderboards.GroupBoxMaze.Hide()
     End Sub
 End Class

@@ -31,9 +31,10 @@ Partial Class Mainmenu
         'btnSnake
         '
         Me.btnSnake.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnSnake.Location = New System.Drawing.Point(217, 34)
+        Me.btnSnake.Location = New System.Drawing.Point(301, 42)
+        Me.btnSnake.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSnake.Name = "btnSnake"
-        Me.btnSnake.Size = New System.Drawing.Size(242, 99)
+        Me.btnSnake.Size = New System.Drawing.Size(323, 122)
         Me.btnSnake.TabIndex = 0
         Me.btnSnake.Text = "Snake"
         Me.btnSnake.UseVisualStyleBackColor = True
@@ -41,9 +42,10 @@ Partial Class Mainmenu
         'btnAntHit
         '
         Me.btnAntHit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnAntHit.Location = New System.Drawing.Point(217, 176)
+        Me.btnAntHit.Location = New System.Drawing.Point(301, 217)
+        Me.btnAntHit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAntHit.Name = "btnAntHit"
-        Me.btnAntHit.Size = New System.Drawing.Size(242, 99)
+        Me.btnAntHit.Size = New System.Drawing.Size(323, 122)
         Me.btnAntHit.TabIndex = 1
         Me.btnAntHit.Text = "Ant Hit"
         Me.btnAntHit.UseVisualStyleBackColor = True
@@ -51,27 +53,29 @@ Partial Class Mainmenu
         'btnMaze
         '
         Me.btnMaze.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMaze.Location = New System.Drawing.Point(217, 320)
+        Me.btnMaze.Location = New System.Drawing.Point(302, 394)
+        Me.btnMaze.Margin = New System.Windows.Forms.Padding(4)
         Me.btnMaze.Name = "btnMaze"
-        Me.btnMaze.Size = New System.Drawing.Size(242, 99)
+        Me.btnMaze.Size = New System.Drawing.Size(323, 122)
         Me.btnMaze.TabIndex = 2
         Me.btnMaze.Text = "Maze"
         Me.btnMaze.UseVisualStyleBackColor = True
         '
         'Mainmenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(704, 461)
+        Me.ClientSize = New System.Drawing.Size(939, 567)
         Me.Controls.Add(Me.btnMaze)
         Me.Controls.Add(Me.btnAntHit)
         Me.Controls.Add(Me.btnSnake)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "Mainmenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Mini Game"
+        Me.Text = "Mini Games"
         Me.ResumeLayout(False)
 
     End Sub

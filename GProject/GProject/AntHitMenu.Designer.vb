@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AntHit
+Partial Class AntHitMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class AntHit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AntHit))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AntHitMenu))
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnRecord = New System.Windows.Forms.Button()
         Me.btnStart = New System.Windows.Forms.Button()
@@ -31,9 +31,10 @@ Partial Class AntHit
         'btnExit
         '
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnExit.Location = New System.Drawing.Point(225, 315)
+        Me.btnExit.Location = New System.Drawing.Point(300, 388)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(242, 99)
+        Me.btnExit.Size = New System.Drawing.Size(323, 122)
         Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -41,35 +42,38 @@ Partial Class AntHit
         'btnRecord
         '
         Me.btnRecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnRecord.Location = New System.Drawing.Point(225, 179)
+        Me.btnRecord.Location = New System.Drawing.Point(300, 220)
+        Me.btnRecord.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRecord.Name = "btnRecord"
-        Me.btnRecord.Size = New System.Drawing.Size(242, 99)
+        Me.btnRecord.Size = New System.Drawing.Size(323, 122)
         Me.btnRecord.TabIndex = 5
-        Me.btnRecord.Text = "LeaderBoard"
+        Me.btnRecord.Text = "Leaderboards"
         Me.btnRecord.UseVisualStyleBackColor = True
         '
         'btnStart
         '
         Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnStart.Location = New System.Drawing.Point(225, 43)
+        Me.btnStart.Location = New System.Drawing.Point(300, 53)
+        Me.btnStart.Margin = New System.Windows.Forms.Padding(4)
         Me.btnStart.Name = "btnStart"
-        Me.btnStart.Size = New System.Drawing.Size(242, 99)
+        Me.btnStart.Size = New System.Drawing.Size(323, 122)
         Me.btnStart.TabIndex = 4
         Me.btnStart.Text = "Play Game"
         Me.btnStart.UseVisualStyleBackColor = True
         '
-        'AntHit
+        'AntHitMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(704, 461)
+        Me.ClientSize = New System.Drawing.Size(939, 567)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnRecord)
         Me.Controls.Add(Me.btnStart)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
-        Me.Name = "AntHit"
+        Me.Name = "AntHitMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AntHit"
         Me.ResumeLayout(False)

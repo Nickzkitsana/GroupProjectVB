@@ -1,17 +1,17 @@
-﻿Public Class LeaderBoard
+﻿Public Class Leaderboards
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         If GroupBoxSnake.Enabled = True Then
-            Snake.Show()
+            SnakeMenu.Show()
             GroupBoxSnake.Enabled = False
             Me.Hide()
         End If
         If GroupBoxAntHit.Enabled = True Then
-            AntHit.Show()
+            AntHitMenu.Show()
             GroupBoxAntHit.Enabled = False
             Me.Hide()
         End If
         If GroupBoxMaze.Enabled = True Then
-            Maze.Show()
+            MazeMenu.Show()
             GroupBoxMaze.Enabled = False
             Me.Hide()
         End If

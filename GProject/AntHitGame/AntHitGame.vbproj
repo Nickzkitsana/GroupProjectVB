@@ -4,31 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B2F3C8C4-6B65-46B8-AB36-BF824D86F62E}</ProjectGuid>
+    <ProjectGuid>{133BDE33-66A7-43A9-8516-6435C0A043A6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>GProject.My.MyApplication</StartupObject>
-    <RootNamespace>GProject</RootNamespace>
-    <AssemblyName>GProject</AssemblyName>
+    <StartupObject>AntHitGame.My.MyApplication</StartupObject>
+    <RootNamespace>AntHitGame</RootNamespace>
+    <AssemblyName>AntHitGame</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>GProject.xml</DocumentationFile>
+    <DocumentationFile>AntHitGame.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -47,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>GProject.xml</DocumentationFile>
+    <DocumentationFile>AntHitGame.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -88,41 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AntHitMenu.Designer.vb">
-      <DependentUpon>AntHitMenu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AntHitMenu.vb">
+    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AntHitGame.Designer.vb">
-      <DependentUpon>AntHitGame.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AntHitGame.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainMenu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainMenu.Designer.vb">
-      <DependentUpon>MainMenu.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Leaderboards.Designer.vb">
-      <DependentUpon>Leaderboards.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Leaderboards.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MazeGame.Designer.vb">
-      <DependentUpon>MazeGame.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MazeGame.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MazeMenu.Designer.vb">
-      <DependentUpon>MazeMenu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MazeMenu.vb">
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -140,49 +95,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SnakeGame.Designer.vb">
-      <DependentUpon>SnakeGame.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SnakeGame.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SnakeMenu.Designer.vb">
-      <DependentUpon>SnakeMenu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SnakeMenu.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AntHitGame.resx">
-      <DependentUpon>AntHitGame.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AntHitMenu.resx">
-      <DependentUpon>AntHitMenu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
-      <DependentUpon>MainMenu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Leaderboards.resx">
-      <DependentUpon>Leaderboards.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MazeGame.resx">
-      <DependentUpon>MazeGame.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MazeMenu.resx">
-      <DependentUpon>MazeMenu.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SnakeGame.resx">
-      <DependentUpon>SnakeGame.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SnakeMenu.resx">
-      <DependentUpon>SnakeMenu.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -197,24 +116,5 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ant_PNG19339.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
 </Project>

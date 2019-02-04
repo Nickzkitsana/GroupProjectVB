@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Maze
+Partial Class MazeMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Maze
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Maze))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MazeMenu))
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnRecord = New System.Windows.Forms.Button()
         Me.btnStart = New System.Windows.Forms.Button()
@@ -31,9 +31,10 @@ Partial Class Maze
         'btnExit
         '
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnExit.Location = New System.Drawing.Point(231, 317)
+        Me.btnExit.Location = New System.Drawing.Point(308, 390)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(242, 99)
+        Me.btnExit.Size = New System.Drawing.Size(323, 122)
         Me.btnExit.TabIndex = 9
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -41,35 +42,38 @@ Partial Class Maze
         'btnRecord
         '
         Me.btnRecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnRecord.Location = New System.Drawing.Point(231, 181)
+        Me.btnRecord.Location = New System.Drawing.Point(308, 223)
+        Me.btnRecord.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRecord.Name = "btnRecord"
-        Me.btnRecord.Size = New System.Drawing.Size(242, 99)
+        Me.btnRecord.Size = New System.Drawing.Size(323, 122)
         Me.btnRecord.TabIndex = 8
-        Me.btnRecord.Text = "LeaderBoard"
+        Me.btnRecord.Text = "Leaderboards"
         Me.btnRecord.UseVisualStyleBackColor = True
         '
         'btnStart
         '
         Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnStart.Location = New System.Drawing.Point(231, 45)
+        Me.btnStart.Location = New System.Drawing.Point(308, 55)
+        Me.btnStart.Margin = New System.Windows.Forms.Padding(4)
         Me.btnStart.Name = "btnStart"
-        Me.btnStart.Size = New System.Drawing.Size(242, 99)
+        Me.btnStart.Size = New System.Drawing.Size(323, 122)
         Me.btnStart.TabIndex = 7
         Me.btnStart.Text = "Play Game"
         Me.btnStart.UseVisualStyleBackColor = True
         '
-        'Maze
+        'MazeMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(704, 461)
+        Me.ClientSize = New System.Drawing.Size(939, 567)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnRecord)
         Me.Controls.Add(Me.btnStart)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
-        Me.Name = "Maze"
+        Me.Name = "MazeMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Maze"
         Me.ResumeLayout(False)
