@@ -26,11 +26,11 @@ Partial Class AntHitGame
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,7 +41,7 @@ Partial Class AntHitGame
         '
         Me.PictureBox1.Image = Global.GProject.My.Resources.Resources.ant_PNG19339
         Me.PictureBox1.Location = New System.Drawing.Point(73, 50)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(59, 104)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -51,8 +51,8 @@ Partial Class AntHitGame
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.GProject.My.Resources.Resources.ant_PNG19339
-        Me.PictureBox2.Location = New System.Drawing.Point(161, 214)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox2.Location = New System.Drawing.Point(175, 214)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(59, 104)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -63,23 +63,12 @@ Partial Class AntHitGame
         '
         Me.PictureBox3.Image = Global.GProject.My.Resources.Resources.ant_PNG19339
         Me.PictureBox3.Location = New System.Drawing.Point(464, 171)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(59, 104)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 2
         Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.GProject.My.Resources.Resources.ant_PNG19339
-        Me.PictureBox4.Location = New System.Drawing.Point(296, 101)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(59, 106)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 3
-        Me.PictureBox4.TabStop = False
         '
         'Timer1
         '
@@ -113,18 +102,29 @@ Partial Class AntHitGame
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Score"
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.GProject.My.Resources.Resources.ant_PNG19339
+        Me.PictureBox4.Location = New System.Drawing.Point(326, 149)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(59, 104)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 6
+        Me.PictureBox4.TabStop = False
+        '
         'AntHitGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AntHitGame"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AntHitGame"
@@ -140,9 +140,9 @@ Partial Class AntHitGame
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox4 As PictureBox
 End Class

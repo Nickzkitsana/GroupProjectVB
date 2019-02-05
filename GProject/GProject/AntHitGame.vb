@@ -17,27 +17,29 @@
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         score = score + 1
-        PictureBox1.Location = New Point(200, 400)
         Label1.Text = score
+        PictureBox1.Location = New Point(200, 400)
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         score = score + 1
+        Label1.Text = score
         PictureBox2.Location = New Point(200, 400)
-        Label1.Text = score
-    End Sub
 
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-        score = score + 1
-        PictureBox3.Location = New Point(200, 400)
-        Label1.Text = score
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         score = score + 1
-        PictureBox4.Location = New Point(200, 400)
         Label1.Text = score
+        PictureBox3.Location = New Point(200, 400)
     End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        score = score + 1
+        Label1.Text = score
+        PictureBox4.Location = New Point(200, 400)
+    End Sub
+
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
