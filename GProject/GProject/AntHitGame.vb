@@ -8,7 +8,7 @@
             PictureBox1.Top -= 5
             PictureBox2.Top -= 5
             PictureBox3.Top -= 5
-            PictureBox4.Top -= 6
+            PictureBox4.Top -= 5
         ElseIf score > 10 And score <= 30 Then
             PictureBox1.Top -= 7
             PictureBox2.Top -= 7
