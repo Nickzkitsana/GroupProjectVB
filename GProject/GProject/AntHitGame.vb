@@ -62,6 +62,7 @@
                 MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
                 If frm = DialogResult.OK Then
+                    'Connect and Insert to DB
                     MessageBox.Show("Complete", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
                     MessageBox.Show("Cancel", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
