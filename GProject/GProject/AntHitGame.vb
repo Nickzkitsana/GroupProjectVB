@@ -8,11 +8,12 @@
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        If PictureBox1.Location.Y < -80 Or PictureBox2.Location.Y < -80 Or PictureBox3.Location.Y < -80 Or PictureBox4.Location.Y < -80 Then
+        If PictureBox1.Location.Y < -60 Or PictureBox2.Location.Y < -60 Or PictureBox3.Location.Y < -60 Or PictureBox4.Location.Y < -60 Then
             Me.Dispose()
             MessageBox.Show("GAMEOVER", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             AntHitMenu.Show()
         End If
+        Label1.Text = score
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
