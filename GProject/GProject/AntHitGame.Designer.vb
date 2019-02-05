@@ -39,6 +39,7 @@ Partial Class AntHitGame
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.GProject.My.Resources.Resources.ant_PNG19339
         Me.PictureBox1.Location = New System.Drawing.Point(73, 50)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
@@ -50,6 +51,7 @@ Partial Class AntHitGame
         '
         'PictureBox2
         '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = Global.GProject.My.Resources.Resources.ant_PNG19339
         Me.PictureBox2.Location = New System.Drawing.Point(131, 366)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
@@ -61,6 +63,7 @@ Partial Class AntHitGame
         '
         'PictureBox3
         '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = Global.GProject.My.Resources.Resources.ant_PNG19339
         Me.PictureBox3.Location = New System.Drawing.Point(420, 416)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
@@ -104,6 +107,7 @@ Partial Class AntHitGame
         '
         'PictureBox4
         '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.Image = Global.GProject.My.Resources.Resources.ant_PNG19339
         Me.PictureBox4.Location = New System.Drawing.Point(299, 204)
         Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)

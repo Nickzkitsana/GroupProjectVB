@@ -58,7 +58,6 @@
         Label1.Text = score
         RandX = Rand.Next(400)
         PictureBox2.Location = New Point(RandX, 600)
-
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
@@ -77,6 +76,10 @@
 
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub AntHitGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
