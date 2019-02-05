@@ -1,16 +1,16 @@
 ﻿Public Class AntHitGame
     Dim score As Integer
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        PictureBox1.Top -= 10
-        PictureBox2.Top -= 10
-        PictureBox3.Top -= 10
-        PictureBox4.Top -= 10
+        PictureBox1.Top -= 5
+        PictureBox2.Top -= 5
+        PictureBox3.Top -= 5
+        PictureBox4.Top -= 5
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        If PictureBox1.Location.Y < -60 And PictureBox2.Location.Y < -60 And PictureBox3.Location.Y < -60 And PictureBox4.Location.Y < -60 Then
+        If PictureBox1.Location.Y < -80 Or PictureBox2.Location.Y < -80 Or PictureBox3.Location.Y < -80 Or PictureBox4.Location.Y < -80 Then
             Me.Dispose()
-            MsgBox("GAMEOVER")
+            MessageBox.Show("GAMEOVER", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             AntHitMenu.Show()
         End If
     End Sub
@@ -37,5 +37,9 @@
         score = score + 1
         PictureBox4.Location = New Point(200, 400)
         Label1.Text = score
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class
