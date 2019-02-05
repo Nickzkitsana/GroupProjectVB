@@ -29,18 +29,44 @@
             PictureBox2.Top -= 15
             PictureBox3.Top -= 15
             PictureBox4.Top -= 15
+        ElseIf score > 100 And score <= 150 Then
+            PictureBox1.Top -= 18
+            PictureBox2.Top -= 18
+            PictureBox3.Top -= 18
+            PictureBox4.Top -= 18
+        ElseIf score > 150 And score <= 200 Then
+            PictureBox1.Top -= 22
+            PictureBox2.Top -= 22
+            PictureBox3.Top -= 22
+            PictureBox4.Top -= 22
+        ElseIf score > 200 And score <= 270 Then
+            PictureBox1.Top -= 26
+            PictureBox2.Top -= 26
+            PictureBox3.Top -= 26
+            PictureBox4.Top -= 26
         Else
-            PictureBox1.Top -= 100
-            PictureBox2.Top -= 100
-            PictureBox3.Top -= 100
-            PictureBox4.Top -= 100
+            PictureBox1.Top -= 40
+            PictureBox2.Top -= 40
+            PictureBox3.Top -= 40
+            PictureBox4.Top -= 40
         End If
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         If PictureBox1.Location.Y < -60 Or PictureBox2.Location.Y < -60 Or PictureBox3.Location.Y < -60 Or PictureBox4.Location.Y < -60 Then
             Me.Dispose()
-            MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Dim name As String = InputBox("Enter Your Name", "GameOver", "")
+            If name = "" Then
+                MessageBox.Show("Cant", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                If frm = DialogResult.OK Then
+                    MessageBox.Show("Complete", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Cancel", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                End If
+            End If
             AntHitMenu.Show()
         End If
         Label1.Text = score
