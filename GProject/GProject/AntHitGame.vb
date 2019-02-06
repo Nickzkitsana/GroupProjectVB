@@ -55,9 +55,10 @@
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         If PictureBox1.Location.Y < -60 Or PictureBox2.Location.Y < -60 Or PictureBox3.Location.Y < -60 Or PictureBox4.Location.Y < -60 Then
             Me.Dispose()
-            Dim name As String = InputBox("Enter Your Name", "GameOver", "")
+            Dim name As String = InputBox("Enter your name", "GameOver", "")
             If name = "" Then
-                MessageBox.Show("Cant", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Please enter your name", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                name = InputBox("Enter your name", "GameOver", "")
             Else
                 MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
