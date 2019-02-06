@@ -1,4 +1,5 @@
-﻿Public Class AntHitMenu
+﻿
+Public Class AntHitMenu
     Private Sub btnRecord_Click(sender As Object, e As EventArgs) Handles btnRecord.Click
         Me.Hide()
         Leaderboards.Show()
@@ -21,4 +22,5 @@
         Me.Hide()
         Mainmenu.Show()
     End Sub
+
 End Class
