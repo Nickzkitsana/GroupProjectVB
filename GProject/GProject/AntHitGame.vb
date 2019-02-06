@@ -56,18 +56,25 @@
         If PictureBox1.Location.Y < -60 Or PictureBox2.Location.Y < -60 Or PictureBox3.Location.Y < -60 Or PictureBox4.Location.Y < -60 Then
             Me.Dispose()
             Dim name As String = InputBox("Enter your name", "GameOver", "")
-            If name = "" Then
-                MessageBox.Show("Please enter your name", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                name = InputBox("Enter your name", "GameOver", "")
-            Else
-                MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                If frm = DialogResult.OK Then
-                    'Connect and Insert to DB
-                    MessageBox.Show("Complete", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            While name = ""
+                If name <> "" Then
+                    Exit Sub
+                ElseIf DialogResult.Cancel Then
+                    MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    AntHitMenu.Show()
+                    Exit Sub
                 Else
-                    MessageBox.Show("Cancel", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("Please enter your name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    name = InputBox("Enter your name", "GameOver", "")
                 End If
+            End While
+            MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+            If frm = DialogResult.OK Then
+                'Connect and Insert to DB
+                MessageBox.Show("Complete", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
             AntHitMenu.Show()
         End If
