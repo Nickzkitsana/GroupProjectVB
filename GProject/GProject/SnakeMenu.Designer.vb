@@ -31,10 +31,9 @@ Partial Class SnakeMenu
         'btnStart
         '
         Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnStart.Location = New System.Drawing.Point(300, 55)
-        Me.btnStart.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnStart.Location = New System.Drawing.Point(225, 45)
         Me.btnStart.Name = "btnStart"
-        Me.btnStart.Size = New System.Drawing.Size(323, 122)
+        Me.btnStart.Size = New System.Drawing.Size(242, 99)
         Me.btnStart.TabIndex = 1
         Me.btnStart.Text = "Play Game"
         Me.btnStart.UseVisualStyleBackColor = True
@@ -42,10 +41,9 @@ Partial Class SnakeMenu
         'btnRecord
         '
         Me.btnRecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnRecord.Location = New System.Drawing.Point(300, 223)
-        Me.btnRecord.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnRecord.Location = New System.Drawing.Point(225, 181)
         Me.btnRecord.Name = "btnRecord"
-        Me.btnRecord.Size = New System.Drawing.Size(323, 122)
+        Me.btnRecord.Size = New System.Drawing.Size(242, 99)
         Me.btnRecord.TabIndex = 2
         Me.btnRecord.Text = "Leaderboards"
         Me.btnRecord.UseVisualStyleBackColor = True
@@ -53,25 +51,23 @@ Partial Class SnakeMenu
         'btnExit
         '
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnExit.Location = New System.Drawing.Point(300, 390)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnExit.Location = New System.Drawing.Point(225, 317)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(323, 122)
+        Me.btnExit.Size = New System.Drawing.Size(242, 99)
         Me.btnExit.TabIndex = 3
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'SnakeMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(939, 567)
+        Me.ClientSize = New System.Drawing.Size(704, 461)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnRecord)
         Me.Controls.Add(Me.btnStart)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "SnakeMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
