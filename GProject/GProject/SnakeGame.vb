@@ -1,4 +1,6 @@
 ﻿Imports System.Drawing
+Imports System.Data
+Imports System.Data.SqlClient
 
 Public Class SnakeGame
 
@@ -9,6 +11,8 @@ Public Class SnakeGame
     Dim r As Rectangle
     Dim ts As Integer = 28
     Dim P1 As New Player
+    Dim conStr As String = "Server=(LocalDB)\MSSQLLocalDB;AttachDBFilename=|DataDirectory|\Minigame.mdf"
+    Dim conn As New SqlConnection(conStr)
 
 
     Dim isGameOver As Boolean = False
@@ -62,12 +66,12 @@ Public Class SnakeGame
                     Dim title = "GameOver"
                     name = InputBox(message, title, "")
                     While name = ""
-                        If DialogResult.Cancel Then
-                            MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        If name = "" Then
+                            MessageBox.Show("Canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                             Me.Close()
                             SnakeMenu.Show()
                             Exit Sub
-                        ElseIf DialogResult.OK Then
+                        Else
                             Exit Sub
                         End If
                     End While
@@ -90,7 +94,7 @@ Public Class SnakeGame
                         End If
                         conn.Close()
                     Else
-                        MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("You've canceled insert" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     End If
                     SnakeMenu.Show()
                     once = once + 1
@@ -119,11 +123,6 @@ Public Class SnakeGame
 
         G.FillRectangle(Brushes.OrangeRed, foodx, foody, ts, ts)
         G.DrawString("Score: " & score.ToString, Me.Font, Brushes.Green, 550, 10)
-        If isGameOver = True Then
-
-            G.DrawString("GAME OVER", Me.Font, Brushes.Red, 550, 40)
-            G.DrawString("Press F1 to restart game or Esc to quit", Me.Font, Brushes.Black, 550, 70)
-        End If
         G = Graphics.FromImage(BB)
 
         BBG.DrawImage(BB, 0, 0, Me.Width, Me.Height)
@@ -230,10 +229,6 @@ Public Class SnakeGame
                 If P1.moveDirection <> "left" Then
                     P1.changeDirection("right")
                 End If
-            Case Keys.F1
-                restartGame()
-            Case Keys.Escape
-                isRunning = False
         End Select
     End Sub
 
