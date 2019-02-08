@@ -101,28 +101,28 @@ Public Class AntHitGame
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         score = score + 1
         Label1.Text = score
-        RandX = Rand.Next(400)
+        RandX = Rand.Next(0, 70)
         PictureBox1.Location = New Point(RandX, 600)
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         score = score + 1
         Label1.Text = score
-        RandX = Rand.Next(400)
+        RandX = Rand.Next(100, 140)
         PictureBox2.Location = New Point(RandX, 600)
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         score = score + 1
         Label1.Text = score
-        RandX = Rand.Next(400)
+        RandX = Rand.Next(190, 260)
         PictureBox3.Location = New Point(RandX, 600)
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         score = score + 1
         Label1.Text = score
-        RandX = Rand.Next(400)
+        RandX = Rand.Next(290, 400)
         PictureBox4.Location = New Point(RandX, 600)
     End Sub
 

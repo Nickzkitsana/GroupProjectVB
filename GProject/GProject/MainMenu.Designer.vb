@@ -36,7 +36,7 @@ Partial Class Mainmenu
         Me.btnSnake.Name = "btnSnake"
         Me.btnSnake.Size = New System.Drawing.Size(323, 122)
         Me.btnSnake.TabIndex = 0
-        Me.btnSnake.Text = "Snake"
+        Me.btnSnake.Text = "Snake Game"
         Me.btnSnake.UseVisualStyleBackColor = True
         '
         'btnAntHit
@@ -47,7 +47,7 @@ Partial Class Mainmenu
         Me.btnAntHit.Name = "btnAntHit"
         Me.btnAntHit.Size = New System.Drawing.Size(323, 122)
         Me.btnAntHit.TabIndex = 1
-        Me.btnAntHit.Text = "Ant Hit"
+        Me.btnAntHit.Text = "Ant Hit Game"
         Me.btnAntHit.UseVisualStyleBackColor = True
         '
         'btnMaze
@@ -58,7 +58,7 @@ Partial Class Mainmenu
         Me.btnMaze.Name = "btnMaze"
         Me.btnMaze.Size = New System.Drawing.Size(323, 122)
         Me.btnMaze.TabIndex = 2
-        Me.btnMaze.Text = "Maze"
+        Me.btnMaze.Text = "Maze Game"
         Me.btnMaze.UseVisualStyleBackColor = True
         '
         'Mainmenu

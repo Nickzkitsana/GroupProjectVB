@@ -1,4 +1,6 @@
 ﻿Imports System.Drawing
+Imports System.Data
+Imports System.Data.SqlClient
 
 Public Class SnakeGame
 
@@ -9,6 +11,8 @@ Public Class SnakeGame
     Dim r As Rectangle
     Dim ts As Integer = 28
     Dim P1 As New Player
+    Dim conStr As String = "Server=(LocalDB)\MSSQLLocalDB;AttachDBFilename=|DataDirectory|\Minigame.mdf"
+    Dim conn As New SqlConnection(conStr)
 
 
     Dim isGameOver As Boolean = False
@@ -56,6 +60,7 @@ Public Class SnakeGame
                 DrawGraphics()
                 If once = 0 Then
                     MessageBox.Show("GameOver")
+
                     Me.Close()
                     Dim name As String
                     Dim message = "Enter your name"
@@ -71,7 +76,6 @@ Public Class SnakeGame
                             Exit Sub
                         End If
                     End While
-
                     MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
                     If frm = DialogResult.OK Then
