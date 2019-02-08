@@ -60,6 +60,7 @@ Public Class SnakeGame
                 DrawGraphics()
                 If once = 0 Then
                     MessageBox.Show("GameOver")
+
                     Me.Close()
                     Dim name As String
                     Dim message = "Enter your name"
@@ -75,7 +76,6 @@ Public Class SnakeGame
                             Exit Sub
                         End If
                     End While
-
                     MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
                     If frm = DialogResult.OK Then
