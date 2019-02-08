@@ -84,12 +84,16 @@ Partial Class MazeGame
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Label51)
+        Me.Panel1.Controls.Add(Me.Label50)
         Me.Panel1.Controls.Add(Me.Label49)
         Me.Panel1.Controls.Add(Me.Label61)
         Me.Panel1.Controls.Add(Me.Label30)
@@ -156,10 +160,10 @@ Partial Class MazeGame
         'Label49
         '
         Me.Label49.AutoSize = True
-        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Label49.Location = New System.Drawing.Point(377, 255)
+        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(364, 251)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(60, 20)
+        Me.Label49.Size = New System.Drawing.Size(82, 29)
         Me.Label49.TabIndex = 61
         Me.Label49.Text = "GOAL"
         '
@@ -680,6 +684,24 @@ Partial Class MazeGame
         '
         Me.Timer1.Interval = 1000
         '
+        'Label50
+        '
+        Me.Label50.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Label50.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label50.Location = New System.Drawing.Point(294, 258)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(23, 46)
+        Me.Label50.TabIndex = 62
+        '
+        'Label51
+        '
+        Me.Label51.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Label51.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label51.Location = New System.Drawing.Point(230, 258)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(23, 57)
+        Me.Label51.TabIndex = 63
+        '
         'MazeGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -758,4 +780,6 @@ Partial Class MazeGame
     Friend WithEvents Label49 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Label50 As Label
 End Class
