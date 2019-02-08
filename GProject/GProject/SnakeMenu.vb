@@ -12,4 +12,9 @@
         Leaderboards.GroupBoxAntHit.Hide()
         Leaderboards.GroupBoxMaze.Hide()
     End Sub
+
+    Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+        Me.Hide()
+        SnakeGame.Show()
+    End Sub
 End Class

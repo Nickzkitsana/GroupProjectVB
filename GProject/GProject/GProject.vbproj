@@ -140,6 +140,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Player.vb" />
     <Compile Include="SnakeGame.Designer.vb">
       <DependentUpon>SnakeGame.vb</DependentUpon>
     </Compile>
@@ -152,6 +153,7 @@
     <Compile Include="SnakeMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SnakePart.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AntHitGame.resx">
