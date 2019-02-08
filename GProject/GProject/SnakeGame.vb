@@ -60,18 +60,20 @@ Public Class SnakeGame
                 DrawGraphics()
                 If once = 0 Then
                     MessageBox.Show("GameOver")
-                    Me.Hide()
-                    Dim name As String = InputBox("Enter your name", "GameOver", "")
+
+                    Me.Close()
+                    Dim name As String
+                    Dim message = "Enter your name"
+                    Dim title = "GameOver"
+                    name = InputBox(message, title, "")
                     While name = ""
-                        If name <> "" Then
-                            Exit Sub
-                        ElseIf DialogResult.Cancel Then
+                        If DialogResult.Cancel Then
                             MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            Me.Close()
                             SnakeMenu.Show()
                             Exit Sub
-                        Else
-                            MessageBox.Show("Please enter your name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                            name = InputBox("Enter your name", "GameOver", "")
+                        ElseIf DialogResult.OK Then
+                            Exit Sub
                         End If
                     End While
                     MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
