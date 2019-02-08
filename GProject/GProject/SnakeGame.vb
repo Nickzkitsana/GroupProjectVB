@@ -1,4 +1,6 @@
 ﻿Imports System.Drawing
+Imports System.Data
+Imports System.Data.SqlClient
 
 Public Class SnakeGame
 
@@ -9,6 +11,8 @@ Public Class SnakeGame
     Dim r As Rectangle
     Dim ts As Integer = 28
     Dim P1 As New Player
+    Dim conStr As String = "Server=(LocalDB)\MSSQLLocalDB;AttachDBFilename=|DataDirectory|\Minigame.mdf"
+    Dim conn As New SqlConnection(conStr)
 
 
     Dim isGameOver As Boolean = False
@@ -56,6 +60,41 @@ Public Class SnakeGame
                 DrawGraphics()
                 If once = 0 Then
                     MessageBox.Show("GameOver")
+                    Me.Hide()
+                    Dim name As String = InputBox("Enter your name", "GameOver", "")
+                    While name = ""
+                        If name <> "" Then
+                            Exit Sub
+                        ElseIf DialogResult.Cancel Then
+                            MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            SnakeMenu.Show()
+                            Exit Sub
+                        Else
+                            MessageBox.Show("Please enter your name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            name = InputBox("Enter your name", "GameOver", "")
+                        End If
+                    End While
+                    MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                    If frm = DialogResult.OK Then
+                        'Connect and Insert to DB
+                        conn.Open()
+                        Dim sql As String = "INSERT INTO Anthit(name,
+                                                        score)
+                                     values (@name , @score)"
+                        Dim cmd As New SqlCommand(sql, conn)
+                        cmd.Parameters.AddWithValue("name", name)
+                        cmd.Parameters.AddWithValue("score", score)
+                        If cmd.ExecuteNonQuery = 1 Then
+                            MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Else
+                            MessageBox.Show("ไม่สามารถเพิ่มข้อมูลได้", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        End If
+                        conn.Close()
+                    Else
+                        MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    End If
+                    SnakeMenu.Show()
                     once = once + 1
                 End If
             End If
