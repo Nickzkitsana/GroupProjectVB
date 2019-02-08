@@ -22,6 +22,7 @@ Partial Class MazeGame
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label61 = New System.Windows.Forms.Label()
@@ -81,6 +82,8 @@ Partial Class MazeGame
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -673,6 +676,10 @@ Partial Class MazeGame
         Me.Label1.Size = New System.Drawing.Size(106, 23)
         Me.Label1.TabIndex = 0
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'MazeGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -749,4 +756,6 @@ Partial Class MazeGame
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label49 As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
 End Class
