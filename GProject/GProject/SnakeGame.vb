@@ -61,40 +61,36 @@ Public Class SnakeGame
                 If once = 0 Then
                     MessageBox.Show("GameOver")
                     Me.Close()
-                    Dim name As String
+                    Dim name As string
                     Dim message = "Enter your name"
                     Dim title = "GameOver"
                     name = InputBox(message, title, "")
-                    While name = ""
-                        If name = "" Then
-                            MessageBox.Show("Canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                            Me.Close()
-                            SnakeMenu.Show()
-                            Exit Sub
-                        Else
-                            Exit Sub
-                        End If
-                    End While
-
-                    MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                    If frm = DialogResult.OK Then
-                        'Connect and Insert to DB
-                        conn.Open()
-                        Dim sql As String = "INSERT INTO Anthit(name,
+                    If name <> "" Then
+                        MessageBox.Show("Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                        If frm = DialogResult.OK Then
+                            'Connect and Insert to DB
+                            conn.Open()
+                            Dim sql As String = "INSERT INTO snake(name,
                                                         score)
                                      values (@name , @score)"
-                        Dim cmd As New SqlCommand(sql, conn)
-                        cmd.Parameters.AddWithValue("name", name)
-                        cmd.Parameters.AddWithValue("score", score)
-                        If cmd.ExecuteNonQuery = 1 Then
-                            MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Dim cmd As New SqlCommand(sql, conn)
+                            cmd.Parameters.AddWithValue("name", name)
+                            cmd.Parameters.AddWithValue("score", score)
+                            If cmd.ExecuteNonQuery = 1 Then
+                                MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Else
+                                MessageBox.Show("ไม่สามารถเพิ่มข้อมูลได้", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            End If
+                            conn.Close()
                         Else
-                            MessageBox.Show("ไม่สามารถเพิ่มข้อมูลได้", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            MessageBox.Show("You've canceled insert" & vbNewLine & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         End If
-                        conn.Close()
                     Else
-                        MessageBox.Show("You've canceled insert" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("Canceled / Empty Input" & vbNewLine & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        Me.Close()
+                        SnakeMenu.Show()
+                        Exit Sub
                     End If
                     SnakeMenu.Show()
                     once = once + 1

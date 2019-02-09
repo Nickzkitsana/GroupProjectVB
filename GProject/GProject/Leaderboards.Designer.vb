@@ -52,9 +52,23 @@ Partial Class Leaderboards
         '
         'gridSnake
         '
+        Me.gridSnake.AllowUserToAddRows = False
+        Me.gridSnake.AllowUserToDeleteRows = False
+        Me.gridSnake.AllowUserToResizeColumns = False
+        Me.gridSnake.AllowUserToResizeRows = False
+        Me.gridSnake.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gridSnake.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.gridSnake.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridSnake.ColumnHeadersVisible = False
         Me.gridSnake.Location = New System.Drawing.Point(25, 49)
         Me.gridSnake.Name = "gridSnake"
+        Me.gridSnake.ReadOnly = True
+        Me.gridSnake.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.gridSnake.RowHeadersVisible = False
+        Me.gridSnake.RowTemplate.Height = 35
+        Me.gridSnake.RowTemplate.ReadOnly = True
+        Me.gridSnake.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridSnake.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.gridSnake.Size = New System.Drawing.Size(686, 324)
         Me.gridSnake.TabIndex = 0
         '
@@ -63,18 +77,32 @@ Partial Class Leaderboards
         Me.GroupBoxAntHit.Controls.Add(Me.gridAnthit)
         Me.GroupBoxAntHit.Enabled = False
         Me.GroupBoxAntHit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.GroupBoxAntHit.Location = New System.Drawing.Point(36, 13)
+        Me.GroupBoxAntHit.Location = New System.Drawing.Point(37, 13)
         Me.GroupBoxAntHit.Name = "GroupBoxAntHit"
-        Me.GroupBoxAntHit.Size = New System.Drawing.Size(730, 391)
+        Me.GroupBoxAntHit.Size = New System.Drawing.Size(724, 349)
         Me.GroupBoxAntHit.TabIndex = 1
         Me.GroupBoxAntHit.TabStop = False
         Me.GroupBoxAntHit.Text = "Leaderboards AntHit"
         '
         'gridAnthit
         '
-        Me.gridAnthit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridAnthit.AllowUserToAddRows = False
+        Me.gridAnthit.AllowUserToDeleteRows = False
+        Me.gridAnthit.AllowUserToResizeColumns = False
+        Me.gridAnthit.AllowUserToResizeRows = False
+        Me.gridAnthit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gridAnthit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.gridAnthit.ColumnHeadersHeight = 18
+        Me.gridAnthit.ColumnHeadersVisible = False
         Me.gridAnthit.Location = New System.Drawing.Point(22, 37)
         Me.gridAnthit.Name = "gridAnthit"
+        Me.gridAnthit.ReadOnly = True
+        Me.gridAnthit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.gridAnthit.RowHeadersVisible = False
+        Me.gridAnthit.RowTemplate.Height = 35
+        Me.gridAnthit.RowTemplate.ReadOnly = True
+        Me.gridAnthit.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridAnthit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.gridAnthit.Size = New System.Drawing.Size(687, 336)
         Me.gridAnthit.TabIndex = 0
         '
@@ -83,7 +111,7 @@ Partial Class Leaderboards
         Me.GroupBoxMaze.Controls.Add(Me.gridMaze)
         Me.GroupBoxMaze.Enabled = False
         Me.GroupBoxMaze.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.GroupBoxMaze.Location = New System.Drawing.Point(30, 13)
+        Me.GroupBoxMaze.Location = New System.Drawing.Point(31, 13)
         Me.GroupBoxMaze.Name = "GroupBoxMaze"
         Me.GroupBoxMaze.Size = New System.Drawing.Size(730, 391)
         Me.GroupBoxMaze.TabIndex = 2
@@ -92,9 +120,23 @@ Partial Class Leaderboards
         '
         'gridMaze
         '
-        Me.gridMaze.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridMaze.AllowUserToAddRows = False
+        Me.gridMaze.AllowUserToDeleteRows = False
+        Me.gridMaze.AllowUserToResizeColumns = False
+        Me.gridMaze.AllowUserToResizeRows = False
+        Me.gridMaze.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gridMaze.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.gridMaze.ColumnHeadersHeight = 18
+        Me.gridMaze.ColumnHeadersVisible = False
         Me.gridMaze.Location = New System.Drawing.Point(30, 46)
         Me.gridMaze.Name = "gridMaze"
+        Me.gridMaze.ReadOnly = True
+        Me.gridMaze.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.gridMaze.RowHeadersVisible = False
+        Me.gridMaze.RowTemplate.Height = 35
+        Me.gridMaze.RowTemplate.ReadOnly = True
+        Me.gridMaze.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridMaze.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.gridMaze.Size = New System.Drawing.Size(671, 324)
         Me.gridMaze.TabIndex = 0
         '
