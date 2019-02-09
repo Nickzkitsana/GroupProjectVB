@@ -37,6 +37,8 @@ Public Class Leaderboards
 
     Private Sub Leaderboards_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AnthitScore()
+        SnakeScore()
+        MazeScore()
     End Sub
 
     Private Sub AnthitScore()
@@ -48,6 +50,30 @@ Public Class Leaderboards
         adapter.Fill(data, "AH")
 
         gridAnthit.DataSource = data.Tables("AH")
+        conn.Close()
+    End Sub
+
+    Private Sub SnakeScore()
+        conn.Open()
+        Dim sql As String = "SELECT * FROM Snake"
+        Dim cmd As New SqlCommand(sql, conn)
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim data As New DataSet()
+        adapter.Fill(data, "AH")
+
+        gridSnake.DataSource = data.Tables("AH")
+        conn.Close()
+    End Sub
+
+    Private Sub MazeScore()
+        conn.Open()
+        Dim sql As String = "SELECT * FROM Maze"
+        Dim cmd As New SqlCommand(sql, conn)
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim data As New DataSet()
+        adapter.Fill(data, "AH")
+
+        gridMaze.DataSource = data.Tables("AH")
         conn.Close()
     End Sub
 

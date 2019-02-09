@@ -60,41 +60,37 @@ Public Class SnakeGame
                 DrawGraphics()
                 If once = 0 Then
                     MessageBox.Show("GameOver")
-
                     Me.Close()
-                    Dim name As String
+                    Dim name As string
                     Dim message = "Enter your name"
                     Dim title = "GameOver"
                     name = InputBox(message, title, "")
-                    While name = ""
-                        If DialogResult.Cancel Then
-                            MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                            Me.Close()
-                            SnakeMenu.Show()
-                            Exit Sub
-                        ElseIf DialogResult.OK Then
-                            Exit Sub
-                        End If
-                    End While
-                    MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                    If frm = DialogResult.OK Then
-                        'Connect and Insert to DB
-                        conn.Open()
-                        Dim sql As String = "INSERT INTO Anthit(name,
+                    If name <> "" Then
+                        MessageBox.Show("Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                        If frm = DialogResult.OK Then
+                            'Connect and Insert to DB
+                            conn.Open()
+                            Dim sql As String = "INSERT INTO snake(name,
                                                         score)
                                      values (@name , @score)"
-                        Dim cmd As New SqlCommand(sql, conn)
-                        cmd.Parameters.AddWithValue("name", name)
-                        cmd.Parameters.AddWithValue("score", score)
-                        If cmd.ExecuteNonQuery = 1 Then
-                            MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Dim cmd As New SqlCommand(sql, conn)
+                            cmd.Parameters.AddWithValue("name", name)
+                            cmd.Parameters.AddWithValue("score", score)
+                            If cmd.ExecuteNonQuery = 1 Then
+                                MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Else
+                                MessageBox.Show("ไม่สามารถเพิ่มข้อมูลได้", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            End If
+                            conn.Close()
                         Else
-                            MessageBox.Show("ไม่สามารถเพิ่มข้อมูลได้", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            MessageBox.Show("You've canceled insert" & vbNewLine & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         End If
-                        conn.Close()
                     Else
-                        MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("Canceled / Empty Input" & vbNewLine & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        Me.Close()
+                        SnakeMenu.Show()
+                        Exit Sub
                     End If
                     SnakeMenu.Show()
                     once = once + 1
@@ -123,11 +119,6 @@ Public Class SnakeGame
 
         G.FillRectangle(Brushes.OrangeRed, foodx, foody, ts, ts)
         G.DrawString("Score: " & score.ToString, Me.Font, Brushes.Green, 550, 10)
-        If isGameOver = True Then
-
-            G.DrawString("GAME OVER", Me.Font, Brushes.Red, 550, 40)
-            G.DrawString("Press F1 to restart game or Esc to quit", Me.Font, Brushes.Black, 550, 70)
-        End If
         G = Graphics.FromImage(BB)
 
         BBG.DrawImage(BB, 0, 0, Me.Width, Me.Height)
@@ -234,10 +225,6 @@ Public Class SnakeGame
                 If P1.moveDirection <> "left" Then
                     P1.changeDirection("right")
                 End If
-            Case Keys.F1
-                restartGame()
-            Case Keys.Escape
-                isRunning = False
         End Select
     End Sub
 
