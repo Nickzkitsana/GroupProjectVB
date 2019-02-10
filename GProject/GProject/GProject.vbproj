@@ -222,6 +222,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Minigame.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\free-vector-refresh-clip-art_117474_Refresh_clip_art_hight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>

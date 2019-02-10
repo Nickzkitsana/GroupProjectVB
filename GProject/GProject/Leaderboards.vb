@@ -1,4 +1,5 @@
 ﻿Imports System.Data
+Imports System.Data.OleDb
 Imports System.Data.SqlClient
 
 Public Class Leaderboards
@@ -93,5 +94,11 @@ Public Class Leaderboards
 
     Private Sub gridMaze_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gridMaze.CellContentClick
 
+    End Sub
+
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        AnthitScore()
+        SnakeScore()
+        MazeScore()
     End Sub
 End Class
