@@ -36,9 +36,9 @@ Public Class MazeGame
                 cmd.Parameters.AddWithValue("name", name)
                 cmd.Parameters.AddWithValue("time", sec)
                 If cmd.ExecuteNonQuery = 1 Then
-                    MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Insert Success", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
-                    MessageBox.Show("ไม่สามารถเพิ่มข้อมูลได้", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show("Insert Failed", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 End If
                 conn.Close()
             Else
