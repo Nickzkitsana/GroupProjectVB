@@ -60,39 +60,37 @@ Public Class AntHitGame
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         If PictureBox1.Location.Y < -60 Or PictureBox2.Location.Y < -60 Or PictureBox3.Location.Y < -60 Or PictureBox4.Location.Y < -60 Then
             Me.Dispose()
-            Dim name As String = InputBox("Enter your name", "GameOver", "")
-            While name = ""
-                If name <> "" Then
-                    Exit Sub
-                ElseIf DialogResult.Cancel Then
-                    MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                    AntHitMenu.Show()
-                    Exit Sub
-                Else
-                    MessageBox.Show("Please enter your name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                    name = InputBox("Enter your name", "GameOver", "")
-                End If
-            End While
-            MessageBox.Show("GAMEOVER" & vbNewLine & "Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-            If frm = DialogResult.OK Then
-                'Connect and Insert to DB
-                conn.Open()
-                Dim sql As String = "INSERT INTO Anthit(name,
-                                                        score)
+            Dim name As String
+            Dim message = "Enter your name"
+            Dim title = "GameOver"
+            name = InputBox(message, title, "")
+            If name <> "" Then
+                MessageBox.Show("Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                If frm = DialogResult.OK Then
+                    'Connect and Insert to DB
+                    conn.Open()
+                    Dim sql As String = "INSERT INTO maze(name,score)
                                      values (@name , @score)"
-                Dim cmd As New SqlCommand(sql, conn)
-                cmd.Parameters.AddWithValue("name", name)
-                cmd.Parameters.AddWithValue("score", score)
-                If cmd.ExecuteNonQuery = 1 Then
-                    MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Dim cmd As New SqlCommand(sql, conn)
+                    cmd.Parameters.AddWithValue("name", name)
+                    cmd.Parameters.AddWithValue("score", score)
+                    If cmd.ExecuteNonQuery = 1 Then
+                        MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Else
+                        MessageBox.Show("ไม่สามารถเพิ่มข้อมูลได้", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
+                    conn.Close()
                 Else
-                    MessageBox.Show("ไม่สามารถเพิ่มข้อมูลได้", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show("You've canceled insert" & vbNewLine & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 End If
-                conn.Close()
             Else
-                MessageBox.Show("You've canceled" & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Canceled / Empty Input" & vbNewLine & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Me.Close()
+                AntHitMenu.Show()
+                Exit Sub
             End If
+            Me.Close()
             AntHitMenu.Show()
         End If
         Label1.Text = score
