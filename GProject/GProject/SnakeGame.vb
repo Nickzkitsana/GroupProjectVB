@@ -71,7 +71,7 @@ Public Class SnakeGame
                         If frm = DialogResult.OK Then
                             'Connect and Insert to DB
                             conn.Open()
-                            Dim sql As String = "INSERT INTO snake(name,
+                            Dim sql As String = "INSERT INTO Snake(name,
                                                         score)
                                      values (@name , @score)"
                             Dim cmd As New SqlCommand(sql, conn)
