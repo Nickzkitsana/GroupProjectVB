@@ -30,36 +30,41 @@ Partial Class MazeMenu
         '
         'btnExit
         '
-        Me.btnExit.BackColor = System.Drawing.Color.LightCoral
+        Me.btnExit.BackColor = System.Drawing.Color.Transparent
+        Me.btnExit.BackgroundImage = Global.GProject.My.Resources.Resources.button_exit
+        Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
         Me.btnExit.Location = New System.Drawing.Point(231, 317)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(242, 99)
+        Me.btnExit.Size = New System.Drawing.Size(242, 60)
         Me.btnExit.TabIndex = 9
-        Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
         'btnRecord
         '
+        Me.btnRecord.BackColor = System.Drawing.Color.Transparent
+        Me.btnRecord.BackgroundImage = Global.GProject.My.Resources.Resources.button_leaderboards
+        Me.btnRecord.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnRecord.Location = New System.Drawing.Point(231, 181)
+        Me.btnRecord.Location = New System.Drawing.Point(231, 196)
         Me.btnRecord.Name = "btnRecord"
-        Me.btnRecord.Size = New System.Drawing.Size(242, 99)
+        Me.btnRecord.Size = New System.Drawing.Size(242, 60)
         Me.btnRecord.TabIndex = 8
-        Me.btnRecord.Text = "Leaderboards"
-        Me.btnRecord.UseVisualStyleBackColor = True
+        Me.btnRecord.UseVisualStyleBackColor = False
         '
         'btnStart
         '
-        Me.btnStart.BackColor = System.Drawing.Color.MediumSpringGreen
+        Me.btnStart.BackColor = System.Drawing.Color.Transparent
+        Me.btnStart.BackgroundImage = Global.GProject.My.Resources.Resources.button_start
+        Me.btnStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnStart.Location = New System.Drawing.Point(231, 45)
+        Me.btnStart.Location = New System.Drawing.Point(231, 71)
         Me.btnStart.Name = "btnStart"
-        Me.btnStart.Size = New System.Drawing.Size(242, 99)
+        Me.btnStart.Size = New System.Drawing.Size(242, 60)
         Me.btnStart.TabIndex = 7
-        Me.btnStart.Text = "Start"
         Me.btnStart.UseVisualStyleBackColor = False
         '
         'MazeMenu
@@ -67,6 +72,8 @@ Partial Class MazeMenu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PeachPuff
+        Me.BackgroundImage = Global.GProject.My.Resources.Resources.yo7TZq6
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(704, 461)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnRecord)

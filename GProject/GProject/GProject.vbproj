@@ -225,6 +225,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Minigame.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\button_exit.png" />
+    <None Include="Resources\button_leaderboards.png" />
+    <None Include="Resources\button_start.png" />
+    <None Include="Resources\yo7TZq6.jpg" />
     <None Include="Resources\ant-smasher.png" />
     <None Include="Resources\logo.jpg" />
     <None Include="Resources\snake-960x540.png" />

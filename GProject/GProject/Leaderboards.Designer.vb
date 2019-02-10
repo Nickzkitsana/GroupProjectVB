@@ -44,6 +44,7 @@ Partial Class Leaderboards
         '
         'GroupBoxSnake
         '
+        Me.GroupBoxSnake.BackColor = System.Drawing.Color.Transparent
         Me.GroupBoxSnake.Controls.Add(Me.gridSnake)
         Me.GroupBoxSnake.Enabled = False
         Me.GroupBoxSnake.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
@@ -86,6 +87,7 @@ Partial Class Leaderboards
         '
         'GroupBoxAntHit
         '
+        Me.GroupBoxAntHit.BackColor = System.Drawing.Color.Transparent
         Me.GroupBoxAntHit.Controls.Add(Me.gridAnthit)
         Me.GroupBoxAntHit.Enabled = False
         Me.GroupBoxAntHit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
@@ -128,10 +130,11 @@ Partial Class Leaderboards
         '
         'GroupBoxMaze
         '
+        Me.GroupBoxMaze.BackColor = System.Drawing.Color.Transparent
         Me.GroupBoxMaze.Controls.Add(Me.gridMaze)
         Me.GroupBoxMaze.Enabled = False
         Me.GroupBoxMaze.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.GroupBoxMaze.Location = New System.Drawing.Point(31, 18)
+        Me.GroupBoxMaze.Location = New System.Drawing.Point(34, 22)
         Me.GroupBoxMaze.Name = "GroupBoxMaze"
         Me.GroupBoxMaze.Size = New System.Drawing.Size(730, 419)
         Me.GroupBoxMaze.TabIndex = 2
@@ -171,21 +174,22 @@ Partial Class Leaderboards
         '
         'btnExit
         '
-        Me.btnExit.BackColor = System.Drawing.Color.LightCoral
+        Me.btnExit.BackColor = System.Drawing.Color.Transparent
+        Me.btnExit.BackgroundImage = Global.GProject.My.Resources.Resources.button_exit
+        Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.btnExit.Location = New System.Drawing.Point(629, 459)
+        Me.btnExit.Location = New System.Drawing.Point(598, 459)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(132, 44)
+        Me.btnExit.Size = New System.Drawing.Size(163, 44)
         Me.btnExit.TabIndex = 1
-        Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
         'btnRefresh
         '
         Me.btnRefresh.BackgroundImage = Global.GProject.My.Resources.Resources.free_vector_refresh_clip_art_117474_Refresh_clip_art_hight
         Me.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnRefresh.Location = New System.Drawing.Point(552, 454)
+        Me.btnRefresh.Location = New System.Drawing.Point(499, 454)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Size = New System.Drawing.Size(55, 55)
         Me.btnRefresh.TabIndex = 3
@@ -196,6 +200,8 @@ Partial Class Leaderboards
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PeachPuff
+        Me.BackgroundImage = Global.GProject.My.Resources.Resources.yo7TZq6
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 521)
         Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.GroupBoxMaze)

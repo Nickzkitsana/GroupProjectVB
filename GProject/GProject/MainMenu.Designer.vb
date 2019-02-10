@@ -71,6 +71,8 @@ Partial Class Mainmenu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PeachPuff
+        Me.BackgroundImage = Global.GProject.My.Resources.Resources.yo7TZq6
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(704, 461)
         Me.Controls.Add(Me.btnMaze)
         Me.Controls.Add(Me.btnAntHit)
