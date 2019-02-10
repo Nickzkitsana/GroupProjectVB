@@ -59,9 +59,9 @@ Public Class Leaderboards
         Dim cmd As New SqlCommand(sql, conn)
         Dim adapter As New SqlDataAdapter(cmd)
         Dim data As New DataSet()
-        adapter.Fill(data, "AH")
+        adapter.Fill(data, "SN")
 
-        gridSnake.DataSource = data.Tables("AH")
+        gridSnake.DataSource = data.Tables("SN")
         conn.Close()
     End Sub
 
@@ -71,9 +71,9 @@ Public Class Leaderboards
         Dim cmd As New SqlCommand(sql, conn)
         Dim adapter As New SqlDataAdapter(cmd)
         Dim data As New DataSet()
-        adapter.Fill(data, "AH")
+        adapter.Fill(data, "MZ")
 
-        gridMaze.DataSource = data.Tables("AH")
+        gridMaze.DataSource = data.Tables("MZ")
         conn.Close()
     End Sub
 
