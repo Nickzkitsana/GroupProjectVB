@@ -84,8 +84,38 @@ Public Class MazeGame
             Dim userMsg = InputBox("What is your secret code?", "Secret Entry Form", "Enter your secret code here")
             If userMsg = "GIVE ME GRADE A" Then
                 Timer1.Stop()
-                MessageBox.Show("THIS IS GOAL" + vbNewLine + "Your time is " & time.ToString)
-                Close()
+                MessageBox.Show("GOAL !!")
+                Dim name As String
+                Dim message = "Enter your name"
+                Dim title = "GameOver"
+                name = InputBox(message, title, "")
+                If name <> "" Then
+                    MessageBox.Show("Time : " & time & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                    If frm = DialogResult.OK Then
+                        'Connect and Insert to DB
+                        conn.Open()
+                        Dim sql As String = "INSERT INTO Maze(name,time)
+                                     values (@name , @time)"
+                        Dim cmd As New SqlCommand(sql, conn)
+                        cmd.Parameters.AddWithValue("name", name)
+                        cmd.Parameters.AddWithValue("time", sec)
+                        If cmd.ExecuteNonQuery = 1 Then
+                            MessageBox.Show("Insert Success", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Else
+                            MessageBox.Show("Insert Failed", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        End If
+                        conn.Close()
+                    Else
+                        MessageBox.Show("You've canceled insert" & vbNewLine & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    End If
+                Else
+                    MessageBox.Show("Canceled / Empty Input" & vbNewLine & vbNewLine & "Back to menu", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Me.Close()
+                    MazeMenu.Show()
+                    Exit Sub
+                End If
+                Me.Close()
                 MazeMenu.Show()
             Else
                 MessageBox.Show("Incorrect")

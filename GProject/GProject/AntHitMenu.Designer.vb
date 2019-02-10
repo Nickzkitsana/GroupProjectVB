@@ -30,48 +30,49 @@ Partial Class AntHitMenu
         '
         'btnExit
         '
+        Me.btnExit.BackColor = System.Drawing.Color.LightCoral
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnExit.Location = New System.Drawing.Point(300, 388)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnExit.Location = New System.Drawing.Point(225, 315)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(323, 122)
+        Me.btnExit.Size = New System.Drawing.Size(242, 99)
         Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'btnRecord
         '
         Me.btnRecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnRecord.Location = New System.Drawing.Point(300, 220)
-        Me.btnRecord.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnRecord.Location = New System.Drawing.Point(225, 179)
         Me.btnRecord.Name = "btnRecord"
-        Me.btnRecord.Size = New System.Drawing.Size(323, 122)
+        Me.btnRecord.Size = New System.Drawing.Size(242, 99)
         Me.btnRecord.TabIndex = 5
         Me.btnRecord.Text = "Leaderboards"
         Me.btnRecord.UseVisualStyleBackColor = True
         '
         'btnStart
         '
+        Me.btnStart.BackColor = System.Drawing.Color.MediumSpringGreen
+        Me.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.btnStart.Location = New System.Drawing.Point(300, 53)
-        Me.btnStart.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnStart.Location = New System.Drawing.Point(225, 43)
         Me.btnStart.Name = "btnStart"
-        Me.btnStart.Size = New System.Drawing.Size(323, 122)
+        Me.btnStart.Size = New System.Drawing.Size(242, 99)
         Me.btnStart.TabIndex = 4
-        Me.btnStart.Text = "Play Game"
-        Me.btnStart.UseVisualStyleBackColor = True
+        Me.btnStart.Text = "Start"
+        Me.btnStart.UseVisualStyleBackColor = False
         '
         'AntHitMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(939, 567)
+        Me.BackColor = System.Drawing.Color.PeachPuff
+        Me.ClientSize = New System.Drawing.Size(704, 461)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnRecord)
         Me.Controls.Add(Me.btnStart)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "AntHitMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

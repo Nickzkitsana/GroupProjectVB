@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property ant_smasher() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ant-smasher", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property DEjY() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("DEjY", resourceCulture)
@@ -76,6 +86,26 @@ Namespace My.Resources
         Friend ReadOnly Property free_vector_refresh_clip_art_117474_Refresh_clip_art_hight() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("free-vector-refresh-clip-art_117474_Refresh_clip_art_hight", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property logo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("logo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property snake_960x540() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("snake-960x540", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
