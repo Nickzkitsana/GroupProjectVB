@@ -25,8 +25,8 @@ Public Class MazeGame
             Dim title = "GameOver"
             name = InputBox(message, title, "")
             If name <> "" Then
-                MessageBox.Show("Time : " & Time & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+            MessageBox.Show("Time : " & time & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
                 If frm = DialogResult.OK Then
                     'Connect and Insert to DB
                     conn.Open()
@@ -34,8 +34,8 @@ Public Class MazeGame
                                      values (@name , @time)"
                     Dim cmd As New SqlCommand(sql, conn)
                     cmd.Parameters.AddWithValue("name", name)
-                    cmd.Parameters.AddWithValue("time", Time)
-                    If cmd.ExecuteNonQuery = 1 Then
+                cmd.Parameters.AddWithValue("time", time)
+                If cmd.ExecuteNonQuery = 1 Then
                         MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Else
                         MessageBox.Show("ไม่สามารถเพิ่มข้อมูลได้", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -72,10 +72,10 @@ Public Class MazeGame
             sec = sec + 1
             If sec = 60 Then
                 sec = 0
-                min = min + 1
-            End If
-            Time = min.ToString("00") & ":" & sec.ToString("00")
-            Label50.Text = min.ToString("00") & ":" & sec.ToString("00")
+            'min = min + 1
+        End If
+        time = min.ToString("00") & ":" & sec.ToString("00")
+        Label50.Text = min.ToString("00") & ":" & sec.ToString("00")
         End Sub
 
         Private Sub TxtSearch_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles MyBase.KeyPress
@@ -84,8 +84,8 @@ Public Class MazeGame
                 Dim userMsg = InputBox("What is your secret code?", "Secret Entry Form", "Enter your secret code here")
                 If userMsg = "GIVE ME GRADE A" Then
                     Timer1.Stop()
-                    MessageBox.Show("THIS IS GOAL" + vbNewLine + "Your time is " & Time.ToString)
-                    Close()
+                MessageBox.Show("THIS IS GOAL" + vbNewLine + "Your time is " & time.ToString)
+                Close()
                     MazeMenu.Show()
                 Else
                     MessageBox.Show("Incorrect")
