@@ -215,6 +215,9 @@
     <None Include="Resources\DEjY.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\free-vector-refresh-clip-art_117474_Refresh_clip_art_hight.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Minigame.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -222,7 +225,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Minigame.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\free-vector-refresh-clip-art_117474_Refresh_clip_art_hight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
