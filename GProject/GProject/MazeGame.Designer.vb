@@ -82,18 +82,15 @@ Partial Class MazeGame
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label51 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.Label51)
-        Me.Panel1.Controls.Add(Me.Label50)
         Me.Panel1.Controls.Add(Me.Label49)
         Me.Panel1.Controls.Add(Me.Label61)
         Me.Panel1.Controls.Add(Me.Label30)
@@ -162,9 +159,9 @@ Partial Class MazeGame
         '
         Me.Label49.AutoSize = True
         Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(364, 251)
+        Me.Label49.Location = New System.Drawing.Point(272, 204)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(82, 29)
+        Me.Label49.Size = New System.Drawing.Size(66, 24)
         Me.Label49.TabIndex = 61
         Me.Label49.Text = "GOAL"
         '
@@ -382,7 +379,7 @@ Partial Class MazeGame
         '
         Me.Label37.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label37.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label37.Location = New System.Drawing.Point(110, 169)
+        Me.Label37.Location = New System.Drawing.Point(111, 169)
         Me.Label37.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(17, 99)
@@ -392,7 +389,7 @@ Partial Class MazeGame
         '
         Me.Label36.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label36.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label36.Location = New System.Drawing.Point(110, 236)
+        Me.Label36.Location = New System.Drawing.Point(111, 236)
         Me.Label36.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(17, 116)
@@ -402,7 +399,7 @@ Partial Class MazeGame
         '
         Me.Label35.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label35.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label35.Location = New System.Drawing.Point(110, 48)
+        Me.Label35.Location = New System.Drawing.Point(111, 48)
         Me.Label35.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(17, 124)
@@ -412,7 +409,7 @@ Partial Class MazeGame
         '
         Me.Label34.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label34.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label34.Location = New System.Drawing.Point(48, 263)
+        Me.Label34.Location = New System.Drawing.Point(48, 261)
         Me.Label34.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(17, 38)
@@ -422,7 +419,7 @@ Partial Class MazeGame
         '
         Me.Label33.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label33.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label33.Location = New System.Drawing.Point(48, 334)
+        Me.Label33.Location = New System.Drawing.Point(47, 334)
         Me.Label33.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(17, 54)
@@ -512,7 +509,7 @@ Partial Class MazeGame
         '
         Me.Label23.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label23.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label23.Location = New System.Drawing.Point(319, 136)
+        Me.Label23.Location = New System.Drawing.Point(318, 128)
         Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(92, 19)
@@ -522,7 +519,7 @@ Partial Class MazeGame
         '
         Me.Label22.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label22.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label22.Location = New System.Drawing.Point(199, 136)
+        Me.Label22.Location = New System.Drawing.Point(199, 128)
         Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(128, 19)
@@ -532,7 +529,7 @@ Partial Class MazeGame
         '
         Me.Label21.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label21.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label21.Location = New System.Drawing.Point(110, 210)
+        Me.Label21.Location = New System.Drawing.Point(111, 210)
         Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(92, 19)
@@ -642,7 +639,7 @@ Partial Class MazeGame
         '
         Me.Label10.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(110, 82)
+        Me.Label10.Location = New System.Drawing.Point(111, 82)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(92, 19)
@@ -672,7 +669,7 @@ Partial Class MazeGame
         '
         Me.Label7.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(110, 352)
+        Me.Label7.Location = New System.Drawing.Point(111, 352)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(92, 19)
@@ -692,7 +689,7 @@ Partial Class MazeGame
         '
         Me.Label5.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(48, 319)
+        Me.Label5.Location = New System.Drawing.Point(47, 319)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 19)
@@ -712,7 +709,7 @@ Partial Class MazeGame
         '
         Me.Label3.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(-2, 262)
+        Me.Label3.Location = New System.Drawing.Point(-2, 260)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(67, 19)
@@ -722,7 +719,7 @@ Partial Class MazeGame
         '
         Me.Label2.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(48, 386)
+        Me.Label2.Location = New System.Drawing.Point(47, 386)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(92, 19)
@@ -749,15 +746,6 @@ Partial Class MazeGame
         'Timer1
         '
         Me.Timer1.Interval = 1000
-        '
-        'Label51
-        '
-        Me.Label51.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Label51.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label51.Location = New System.Drawing.Point(230, 258)
-        Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(23, 57)
-        Me.Label51.TabIndex = 63
         '
         'MazeGame
         '
@@ -840,6 +828,5 @@ Partial Class MazeGame
     Friend WithEvents Label49 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents Label51 As Label
     Friend WithEvents Label50 As Label
 End Class
