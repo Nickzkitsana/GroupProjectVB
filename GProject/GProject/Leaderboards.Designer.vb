@@ -30,6 +30,7 @@ Partial Class Leaderboards
         Me.GroupBoxMaze = New System.Windows.Forms.GroupBox()
         Me.gridMaze = New System.Windows.Forms.DataGridView()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnRefresh = New System.Windows.Forms.Button()
         Me.GroupBoxSnake.SuspendLayout()
         CType(Me.gridSnake, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxAntHit.SuspendLayout()
@@ -45,7 +46,7 @@ Partial Class Leaderboards
         Me.GroupBoxSnake.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
         Me.GroupBoxSnake.Location = New System.Drawing.Point(42, 13)
         Me.GroupBoxSnake.Name = "GroupBoxSnake"
-        Me.GroupBoxSnake.Size = New System.Drawing.Size(730, 391)
+        Me.GroupBoxSnake.Size = New System.Drawing.Size(730, 416)
         Me.GroupBoxSnake.TabIndex = 0
         Me.GroupBoxSnake.TabStop = False
         Me.GroupBoxSnake.Text = "Leaderboards Snake"
@@ -60,7 +61,7 @@ Partial Class Leaderboards
         Me.gridSnake.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.gridSnake.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.gridSnake.ColumnHeadersVisible = False
-        Me.gridSnake.Location = New System.Drawing.Point(25, 49)
+        Me.gridSnake.Location = New System.Drawing.Point(25, 44)
         Me.gridSnake.Name = "gridSnake"
         Me.gridSnake.ReadOnly = True
         Me.gridSnake.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -69,7 +70,7 @@ Partial Class Leaderboards
         Me.gridSnake.RowTemplate.ReadOnly = True
         Me.gridSnake.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.gridSnake.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.gridSnake.Size = New System.Drawing.Size(686, 324)
+        Me.gridSnake.Size = New System.Drawing.Size(686, 354)
         Me.gridSnake.TabIndex = 0
         '
         'GroupBoxAntHit
@@ -77,9 +78,9 @@ Partial Class Leaderboards
         Me.GroupBoxAntHit.Controls.Add(Me.gridAnthit)
         Me.GroupBoxAntHit.Enabled = False
         Me.GroupBoxAntHit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.GroupBoxAntHit.Location = New System.Drawing.Point(37, 13)
+        Me.GroupBoxAntHit.Location = New System.Drawing.Point(35, 20)
         Me.GroupBoxAntHit.Name = "GroupBoxAntHit"
-        Me.GroupBoxAntHit.Size = New System.Drawing.Size(724, 349)
+        Me.GroupBoxAntHit.Size = New System.Drawing.Size(724, 411)
         Me.GroupBoxAntHit.TabIndex = 1
         Me.GroupBoxAntHit.TabStop = False
         Me.GroupBoxAntHit.Text = "Leaderboards AntHit"
@@ -103,7 +104,7 @@ Partial Class Leaderboards
         Me.gridAnthit.RowTemplate.ReadOnly = True
         Me.gridAnthit.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.gridAnthit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.gridAnthit.Size = New System.Drawing.Size(687, 336)
+        Me.gridAnthit.Size = New System.Drawing.Size(687, 353)
         Me.gridAnthit.TabIndex = 0
         '
         'GroupBoxMaze
@@ -111,9 +112,9 @@ Partial Class Leaderboards
         Me.GroupBoxMaze.Controls.Add(Me.gridMaze)
         Me.GroupBoxMaze.Enabled = False
         Me.GroupBoxMaze.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.GroupBoxMaze.Location = New System.Drawing.Point(31, 13)
+        Me.GroupBoxMaze.Location = New System.Drawing.Point(31, 20)
         Me.GroupBoxMaze.Name = "GroupBoxMaze"
-        Me.GroupBoxMaze.Size = New System.Drawing.Size(730, 391)
+        Me.GroupBoxMaze.Size = New System.Drawing.Size(730, 419)
         Me.GroupBoxMaze.TabIndex = 2
         Me.GroupBoxMaze.TabStop = False
         Me.GroupBoxMaze.Text = "Leaderboards Maze"
@@ -128,7 +129,7 @@ Partial Class Leaderboards
         Me.gridMaze.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.gridMaze.ColumnHeadersHeight = 18
         Me.gridMaze.ColumnHeadersVisible = False
-        Me.gridMaze.Location = New System.Drawing.Point(30, 46)
+        Me.gridMaze.Location = New System.Drawing.Point(28, 37)
         Me.gridMaze.Name = "gridMaze"
         Me.gridMaze.ReadOnly = True
         Me.gridMaze.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -137,23 +138,35 @@ Partial Class Leaderboards
         Me.gridMaze.RowTemplate.ReadOnly = True
         Me.gridMaze.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.gridMaze.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.gridMaze.Size = New System.Drawing.Size(671, 324)
+        Me.gridMaze.Size = New System.Drawing.Size(671, 354)
         Me.gridMaze.TabIndex = 0
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(648, 410)
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.btnExit.Location = New System.Drawing.Point(629, 459)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(113, 28)
+        Me.btnExit.Size = New System.Drawing.Size(132, 44)
         Me.btnExit.TabIndex = 1
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnRefresh
+        '
+        Me.btnRefresh.BackgroundImage = Global.GProject.My.Resources.Resources.free_vector_refresh_clip_art_117474_Refresh_clip_art_hight
+        Me.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnRefresh.Location = New System.Drawing.Point(552, 454)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(55, 55)
+        Me.btnRefresh.TabIndex = 3
+        Me.btnRefresh.UseVisualStyleBackColor = True
         '
         'Leaderboards
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 521)
+        Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.GroupBoxMaze)
         Me.Controls.Add(Me.GroupBoxAntHit)
         Me.Controls.Add(Me.btnExit)
@@ -180,4 +193,5 @@ Partial Class Leaderboards
     Friend WithEvents gridSnake As DataGridView
     Friend WithEvents gridAnthit As DataGridView
     Friend WithEvents gridMaze As DataGridView
+    Friend WithEvents btnRefresh As Button
 End Class

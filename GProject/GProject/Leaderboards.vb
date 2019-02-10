@@ -1,4 +1,5 @@
 ﻿Imports System.Data
+Imports System.Data.OleDb
 Imports System.Data.SqlClient
 
 Public Class Leaderboards
@@ -73,7 +74,7 @@ Public Class Leaderboards
         conn.Open()
         Dim sql As String = "SELECT name , time 
                              FROM Maze
-                             ORDER BY time"
+                             ORDER BY time asc"
         Dim cmd As New SqlCommand(sql, conn)
         Dim adapter As New SqlDataAdapter(cmd)
         Dim data As New DataSet()
@@ -93,5 +94,11 @@ Public Class Leaderboards
 
     Private Sub gridMaze_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gridMaze.CellContentClick
 
+    End Sub
+
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        AnthitScore()
+        SnakeScore()
+        MazeScore()
     End Sub
 End Class

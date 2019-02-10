@@ -34,7 +34,7 @@ Public Class MazeGame
                                      values (@name , @time)"
                 Dim cmd As New SqlCommand(sql, conn)
                 cmd.Parameters.AddWithValue("name", name)
-                cmd.Parameters.AddWithValue("time", time)
+                cmd.Parameters.AddWithValue("time", sec)
                 If cmd.ExecuteNonQuery = 1 Then
                     MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
