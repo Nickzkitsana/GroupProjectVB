@@ -43,7 +43,9 @@ Public Class Leaderboards
 
     Private Sub AnthitScore()
         conn.Open()
-        Dim sql As String = "SELECT * FROM Anthit"
+        Dim sql As String = "SELECT name , score 
+                             FROM Anthit
+                             ORDER BY score desc"
         Dim cmd As New SqlCommand(sql, conn)
         Dim adapter As New SqlDataAdapter(cmd)
         Dim data As New DataSet()
@@ -55,7 +57,9 @@ Public Class Leaderboards
 
     Private Sub SnakeScore()
         conn.Open()
-        Dim sql As String = "SELECT * FROM Snake"
+        Dim sql As String = "SELECT name , score 
+                             FROM Snake
+                             ORDER BY score desc"
         Dim cmd As New SqlCommand(sql, conn)
         Dim adapter As New SqlDataAdapter(cmd)
         Dim data As New DataSet()
@@ -67,7 +71,8 @@ Public Class Leaderboards
 
     Private Sub MazeScore()
         conn.Open()
-        Dim sql As String = "SELECT * FROM Maze"
+        Dim sql As String = "SELECT name , time 
+                             FROM Maze"
         Dim cmd As New SqlCommand(sql, conn)
         Dim adapter As New SqlDataAdapter(cmd)
         Dim data As New DataSet()

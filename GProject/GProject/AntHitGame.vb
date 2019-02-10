@@ -70,7 +70,7 @@ Public Class AntHitGame
                 If frm = DialogResult.OK Then
                     'Connect and Insert to DB
                     conn.Open()
-                    Dim sql As String = "INSERT INTO maze(name,score)
+                    Dim sql As String = "INSERT INTO Anthit(name,score)
                                      values (@name , @score)"
                     Dim cmd As New SqlCommand(sql, conn)
                     cmd.Parameters.AddWithValue("name", name)
