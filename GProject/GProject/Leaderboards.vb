@@ -44,43 +44,43 @@ Public Class Leaderboards
 
     Private Sub AnthitScore()
         conn.Open()
-        Dim sql As String = "SELECT name , score 
+        Dim sql As String = "SELECT TOP 10 name , score 
                              FROM Anthit
                              ORDER BY score desc"
         Dim cmd As New SqlCommand(sql, conn)
         Dim adapter As New SqlDataAdapter(cmd)
         Dim data As New DataSet()
-        adapter.Fill(data, "AH")
+        adapter.Fill(data, "Anthit")
 
-        gridAnthit.DataSource = data.Tables("AH")
+        gridAnthit.DataSource = data.Tables("Anthit")
         conn.Close()
     End Sub
 
     Private Sub SnakeScore()
         conn.Open()
-        Dim sql As String = "SELECT name , score 
+        Dim sql As String = "SELECT TOP 10 name , score 
                              FROM Snake
                              ORDER BY score desc"
         Dim cmd As New SqlCommand(sql, conn)
         Dim adapter As New SqlDataAdapter(cmd)
         Dim data As New DataSet()
-        adapter.Fill(data, "SN")
+        adapter.Fill(data, "Snake")
 
-        gridSnake.DataSource = data.Tables("SN")
+        gridSnake.DataSource = data.Tables("Snake")
         conn.Close()
     End Sub
 
     Private Sub MazeScore()
         conn.Open()
-        Dim sql As String = "SELECT name , time 
+        Dim sql As String = "SELECT TOP 10 name , time 
                              FROM Maze
                              ORDER BY time asc"
         Dim cmd As New SqlCommand(sql, conn)
         Dim adapter As New SqlDataAdapter(cmd)
         Dim data As New DataSet()
-        adapter.Fill(data, "MZ")
+        adapter.Fill(data, "Maze")
 
-        gridMaze.DataSource = data.Tables("MZ")
+        gridMaze.DataSource = data.Tables("Maze")
         conn.Close()
     End Sub
 
