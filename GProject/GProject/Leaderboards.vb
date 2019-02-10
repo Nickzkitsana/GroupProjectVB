@@ -72,7 +72,8 @@ Public Class Leaderboards
     Private Sub MazeScore()
         conn.Open()
         Dim sql As String = "SELECT name , time 
-                             FROM Maze"
+                             FROM Maze
+                             ORDER BY time"
         Dim cmd As New SqlCommand(sql, conn)
         Dim adapter As New SqlDataAdapter(cmd)
         Dim data As New DataSet()
