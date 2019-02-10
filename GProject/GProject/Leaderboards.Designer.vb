@@ -22,6 +22,9 @@ Partial Class Leaderboards
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Leaderboards))
         Me.GroupBoxSnake = New System.Windows.Forms.GroupBox()
         Me.gridSnake = New System.Windows.Forms.DataGridView()
@@ -61,6 +64,14 @@ Partial Class Leaderboards
         Me.gridSnake.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.gridSnake.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.gridSnake.ColumnHeadersVisible = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridSnake.DefaultCellStyle = DataGridViewCellStyle1
         Me.gridSnake.Location = New System.Drawing.Point(25, 44)
         Me.gridSnake.Name = "gridSnake"
         Me.gridSnake.ReadOnly = True
@@ -78,7 +89,7 @@ Partial Class Leaderboards
         Me.GroupBoxAntHit.Controls.Add(Me.gridAnthit)
         Me.GroupBoxAntHit.Enabled = False
         Me.GroupBoxAntHit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.GroupBoxAntHit.Location = New System.Drawing.Point(35, 20)
+        Me.GroupBoxAntHit.Location = New System.Drawing.Point(37, 18)
         Me.GroupBoxAntHit.Name = "GroupBoxAntHit"
         Me.GroupBoxAntHit.Size = New System.Drawing.Size(724, 411)
         Me.GroupBoxAntHit.TabIndex = 1
@@ -95,6 +106,14 @@ Partial Class Leaderboards
         Me.gridAnthit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.gridAnthit.ColumnHeadersHeight = 18
         Me.gridAnthit.ColumnHeadersVisible = False
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridAnthit.DefaultCellStyle = DataGridViewCellStyle2
         Me.gridAnthit.Location = New System.Drawing.Point(22, 37)
         Me.gridAnthit.Name = "gridAnthit"
         Me.gridAnthit.ReadOnly = True
@@ -112,7 +131,7 @@ Partial Class Leaderboards
         Me.GroupBoxMaze.Controls.Add(Me.gridMaze)
         Me.GroupBoxMaze.Enabled = False
         Me.GroupBoxMaze.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.GroupBoxMaze.Location = New System.Drawing.Point(31, 20)
+        Me.GroupBoxMaze.Location = New System.Drawing.Point(31, 18)
         Me.GroupBoxMaze.Name = "GroupBoxMaze"
         Me.GroupBoxMaze.Size = New System.Drawing.Size(730, 419)
         Me.GroupBoxMaze.TabIndex = 2
@@ -129,6 +148,15 @@ Partial Class Leaderboards
         Me.gridMaze.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.gridMaze.ColumnHeadersHeight = 18
         Me.gridMaze.ColumnHeadersVisible = False
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridMaze.DefaultCellStyle = DataGridViewCellStyle3
+        Me.gridMaze.GridColor = System.Drawing.SystemColors.AppWorkspace
         Me.gridMaze.Location = New System.Drawing.Point(28, 37)
         Me.gridMaze.Name = "gridMaze"
         Me.gridMaze.ReadOnly = True
@@ -143,13 +171,15 @@ Partial Class Leaderboards
         '
         'btnExit
         '
+        Me.btnExit.BackColor = System.Drawing.Color.LightCoral
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.btnExit.Location = New System.Drawing.Point(629, 459)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(132, 44)
         Me.btnExit.TabIndex = 1
         Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'btnRefresh
         '
@@ -165,6 +195,7 @@ Partial Class Leaderboards
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.PeachPuff
         Me.ClientSize = New System.Drawing.Size(800, 521)
         Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.GroupBoxMaze)

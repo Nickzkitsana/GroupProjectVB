@@ -118,7 +118,7 @@ Public Class SnakeGame
         P1.Draw(G)
 
         G.FillRectangle(Brushes.OrangeRed, foodx, foody, ts, ts)
-        G.DrawString("Score: " & score.ToString, Me.Font, Brushes.Green, 550, 10)
+        lblscore.Text = "Score: " & score.ToString
         G = Graphics.FromImage(BB)
 
         BBG.DrawImage(BB, 0, 0, Me.Width, Me.Height)

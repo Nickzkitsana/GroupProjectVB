@@ -225,6 +225,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Minigame.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\ant-smasher.png" />
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\snake-960x540.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
