@@ -96,8 +96,6 @@ Public Class SnakeGame
                     once = once + 1
                 End If
             End If
-
-            tickCounter()
         Loop
         Me.Close()
     End Sub
@@ -187,24 +185,6 @@ Public Class SnakeGame
         End If
     End Sub
 
-    Private Sub restartGame()
-        score = 0
-        P1.moveDirection = "stop"
-        P1.snakeParts.Clear()
-        P1.setRandomPosition()
-
-        isGameOver = False
-    End Sub
-
-    Private Sub tickCounter()
-        If tSec = TimeOfDay.Second And isRunning = True Then
-            tTicks = tTicks + 1
-        Else
-            maxTicks = tTicks
-            tTicks = 0
-            tSec = TimeOfDay.Second
-        End If
-    End Sub
 
     Private Sub SnakeGame_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         Select Case e.KeyCode
@@ -238,7 +218,6 @@ Public Class SnakeGame
         If isRunning = True Then
             isRunning = False
             e.Cancel = True
-
         End If
     End Sub
 End Class
