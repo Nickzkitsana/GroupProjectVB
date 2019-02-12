@@ -65,7 +65,7 @@ Public Class AntHitGame
             Dim title = "GameOver"
             name = InputBox(message, title, "")
             If name <> "" Then
-                MessageBox.Show("Score : " & score & vbNewLine & "Name : " & name, "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Score : " & score & vbNewLine & "Name : " & name, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Dim frm = MessageBox.Show("You need to insert data to database ?", "Submit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
                 If frm = DialogResult.OK Then
                     'Connect and Insert to DB
